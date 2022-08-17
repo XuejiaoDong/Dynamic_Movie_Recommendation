@@ -1,0 +1,340 @@
+@import helper._
+@import edu.neu.Movie
+@(top10:Seq[Movie], topCrime:Seq[Movie], topAction:Seq[Movie], topComedy:Seq[Movie], topHorror:Seq[Movie])(implicit messages: Messages)
+@main("Personal") {
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--<base href="/">-->
+    <!--<base href=".">-->
+    <base href=".">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home | Movie Recommend Website</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link type="text/plain" rel="author">
+    <link href= "@routes.Assets.versioned("stylesheets/style.css")"  rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+<body>
+<section id="top">
+    <center><h3>Movie you might like</h3></center>
+    <div class="movie-row">
+        <div class="movie-row-bounds">
+            <div class="movie-row-scrollable" id="You-might-like" style="margin-left: 0px;">
+                <div class="movie-row-item" style="margin-right:5px">
+                    @for(i <- top10){
+                    <movie-card-smart>
+                        <movie-card-md1>
+                            <div class="movie-card-md1">
+                                <div class="card">
+                                    <link-or-emit><a uisref="base.movie"
+                                                     href="http://localhost:9000/rating/@{i.movieId}">
+                                                        <span>                           <div class="poster">                            <img
+                                                                src="/assets/images/posters/placeholder.jpg">                           </div>                           </span>
+<!--                                                                src="./movie-web/public/images/posters/1.jpg">                           </div>                           </span>-->
+                                    </a></link-or-emit>
+                                    <div class="overlay">
+                                        <div class="above-fold">
+                                            <link-or-emit><a uisref="base.movie"
+                                                             href="http://localhost:9000/rating/@{i.movieId}">
+                                                <span><p class="title">@i.title</p></span></a>
+                                            </link-or-emit>
+                                            <div class="rating-indicator">
+                                                <ml4-rating-or-prediction>
+                                                    <div class="rating-or-prediction predicted">
+                                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                             class="star-icon" height="14px"
+                                                             version="1.1" viewBox="0 0 14 14"
+                                                             width="14px"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <defs></defs>
+                                                            <polygon fill-rule="evenodd"
+                                                                     points="13.7714286 5.4939887 9.22142857 4.89188383 7.27142857 0.790044361 5.32142857 4.89188383 0.771428571 5.4939887 4.11428571 8.56096041 3.25071429 13.0202996 7.27142857 10.8282616 11.2921429 13.0202996 10.4285714 8.56096041"
+                                                                     stroke="none"></polygon>
+                                                        </svg>
+                                                        <div class="rating-value"> @i.rating</div>
+                                                    </div>
+                                                </ml4-rating-or-prediction>
+                                            </div>
+                                        </div>
+                                        <div class="below-fold">
+                                            <div class="genre-list">
+                                                <div class="genre"><a
+                                                        href= "https://www.imdb.com/chart/top"><b>@i.genres</b></a>
+                                                </div>
+                                            </div>
+                                            <div class="ratings-display">
+                                                <div class="rating-average"><span class="rating-large">@i.rating</span>
+                                                    <span class="rating-total">/5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </movie-card-md1>
+                    </movie-card-smart>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="second">
+    <center><h3><a href = "https://www.imdb.com/search/title/?genres=action">Action</a></h3></center>
+    <div class="movie-row">
+        <div class="movie-row-bounds">
+            <div class="movie-row-scrollable" id="action-collection" style="margin-left: 0px;">
+                <div class="movie-row-item" style="margin-right:5px">
+                    @for(i <- topAction){
+                    <movie-card-smart>
+                        <movie-card-md1>
+                            <div class="movie-card-md1">
+                                <div class="card">
+                                    <link-or-emit><a uisref="base.movie"
+                                                     href="http://localhost:9000/rating/@{i.movieId}">
+                                                        <span>                           <div class="poster">                            <img
+                                                                src="/assets/images/posters/action.jpg">                           </div>                           </span>
+                                    </a></link-or-emit>
+                                    <div class="overlay">
+                                        <div class="above-fold">
+                                            <link-or-emit><a uisref="base.movie"
+                                                             href="http://localhost:9000/rating/@{i.movieId}">
+                                                <span><p class="title">@i.title</p></span></a>
+                                            </link-or-emit>
+                                            <div class="rating-indicator">
+                                                <ml4-rating-or-prediction>
+                                                    <div class="rating-or-prediction predicted">
+                                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                             class="star-icon" height="14px"
+                                                             version="1.1" viewBox="0 0 14 14"
+                                                             width="14px"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <defs></defs>
+                                                            <polygon fill-rule="evenodd"
+                                                                     points="13.7714286 5.4939887 9.22142857 4.89188383 7.27142857 0.790044361 5.32142857 4.89188383 0.771428571 5.4939887 4.11428571 8.56096041 3.25071429 13.0202996 7.27142857 10.8282616 11.2921429 13.0202996 10.4285714 8.56096041"
+                                                                     stroke="none"></polygon>
+                                                        </svg>
+                                                        <div class="rating-value"> @i.rating</div>
+                                                    </div>
+                                                </ml4-rating-or-prediction>
+                                            </div>
+                                            </div>
+                                        <div class="below-fold">
+                                            <div class="genre-list">
+                                                <div class="genre"><a
+                                                        href="https://www.imdb.com/chart/top"><b>@i.genres</b></a>
+                                                </div>
+                                            </div>
+                                            <div class="ratings-display">
+                                                <div class="rating-average"><span class="rating-large">@i.rating</span>
+                                                    <span class="rating-total">/5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </movie-card-md1>
+                    </movie-card-smart>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="third">
+    <center><h3><a href="https://www.imdb.com/search/title/?genres=comedy">Comedy</a></h3></center>
+    <div class="movie-row">
+        <div class="movie-row-bounds">
+            <div class="movie-row-scrollable" id="comedy-collection" style="margin-left: 0px;">
+                <div class="movie-row-item" style="margin-right:5px">
+                    @for(i <- topComedy){
+                    <movie-card-smart>
+                        <movie-card-md1>
+                            <div class="movie-card-md1">
+                                <div class="card">
+                                    <link-or-emit><a uisref="base.movie"
+                                                     href="http://localhost:9000/rating/@{i.movieId}">
+                                                        <span>                           <div class="poster">                            <img
+                                                                src="/assets/images/posters/comedy.jpg">                           </div>                           </span>
+                                    </a></link-or-emit>
+                                    <div class="overlay">
+                                        <div class="above-fold">
+                                            <link-or-emit><a uisref="base.movie"
+                                                             href="http://localhost:9000/rating/@{i.movieId}">
+                                                <span><p class="title">@i.title</p></span></a>
+                                            </link-or-emit>
+                                            <div class="rating-indicator">
+                                                <ml4-rating-or-prediction>
+                                                    <div class="rating-or-prediction predicted">
+                                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                             class="star-icon" height="14px"
+                                                             version="1.1" viewBox="0 0 14 14"
+                                                             width="14px"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <defs></defs>
+                                                            <polygon fill-rule="evenodd"
+                                                                     points="13.7714286 5.4939887 9.22142857 4.89188383 7.27142857 0.790044361 5.32142857 4.89188383 0.771428571 5.4939887 4.11428571 8.56096041 3.25071429 13.0202996 7.27142857 10.8282616 11.2921429 13.0202996 10.4285714 8.56096041"
+                                                                     stroke="none"></polygon>
+                                                        </svg>
+                                                        <div class="rating-value"> @i.rating</div>
+                                                    </div>
+                                                </ml4-rating-or-prediction>
+                                            </div>
+                                            </div>
+                                        <div class="below-fold">
+                                            <div class="genre-list">
+                                                <div class="genre"><a
+                                                        href="https://www.imdb.com/chart/top"><b>@i.genres</b></a>
+                                                </div>
+                                            </div>
+                                            <div class="ratings-display">
+                                                <div class="rating-average"><span class="rating-large">@i.rating</span>
+                                                    <span class="rating-total">/5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </movie-card-md1>
+                    </movie-card-smart>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="fourth">
+    <center><h3><a href="https://www.imdb.com/search/title/?genres=crime">Crime</a></h3></center>
+    <div class="movie-row">
+        <div class="movie-row-bounds">
+            <div class="movie-row-scrollable" id="You-might-like" style="margin-left: 0px;">
+                <div class="movie-row-item" style="margin-right:5px">
+                    @for(i <- topCrime){
+                    <movie-card-smart>
+                        <movie-card-md1>
+                            <div class="movie-card-md1">
+                                <div class="card">
+                                    <link-or-emit><a uisref="base.movie"
+                                                     href="http://localhost:9000/rating/@{i.movieId}">
+                                                        <span>                           <div class="poster">                            <img
+                                                                src="/assets/images/posters/crime.jpg">                           </div>                           </span>
+                                    </a></link-or-emit>
+                                    <div class="overlay">
+                                        <div class="above-fold">
+                                            <link-or-emit><a uisref="base.movie"
+                                                             href="http://localhost:9000/rating/@{i.movieId}">
+                                                <span><p class="title">@i.title</p></span></a>
+                                            </link-or-emit>
+                                            <div class="rating-indicator">
+                                                <ml4-rating-or-prediction>
+                                                    <div class="rating-or-prediction predicted">
+                                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                             class="star-icon" height="14px"
+                                                             version="1.1" viewBox="0 0 14 14"
+                                                             width="14px"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <defs></defs>
+                                                            <polygon fill-rule="evenodd"
+                                                                     points="13.7714286 5.4939887 9.22142857 4.89188383 7.27142857 0.790044361 5.32142857 4.89188383 0.771428571 5.4939887 4.11428571 8.56096041 3.25071429 13.0202996 7.27142857 10.8282616 11.2921429 13.0202996 10.4285714 8.56096041"
+                                                                     stroke="none"></polygon>
+                                                        </svg>
+                                                        <div class="rating-value"> @i.rating</div>
+                                                    </div>
+                                                </ml4-rating-or-prediction>
+                                            </div>
+                                        </div>
+                                        <div class="below-fold">
+                                            <div class="genre-list">
+                                                <div class="genre"><a
+                                                        href="https://www.imdb.com/chart/top"><b>@i.genres</b></a>
+                                                </div>
+                                            </div>
+                                            <div class="ratings-display">
+                                                <div class="rating-average"><span class="rating-large">@i.rating</span>
+                                                    <span class="rating-total">/5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </movie-card-md1>
+                    </movie-card-smart>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="fifth">
+    <center><h3><a href="https://www.imdb.com/search/title/?genres=horror">Horror</a></h3></center>
+    <div class="movie-row">
+        <div class="movie-row-bounds">
+            <div class="movie-row-scrollable" id="You-might-like" style="margin-left: 0px;">
+                <div class="movie-row-item" style="margin-right:5px">
+                    @for(i <- topHorror){
+                    <movie-card-smart>
+                        <movie-card-md1>
+                            <div class="movie-card-md1">
+                                <div class="card">
+                                    <link-or-emit><a uisref="base.movie"
+                                                     href="http://localhost:9000/rating/@{i.movieId}">
+                                                        <span>                           <div class="poster">                            <img
+                                                                src="/assets/images/posters/horror.jpg">                           </div>                           </span>
+                                    </a></link-or-emit>
+                                    <div class="overlay">
+                                        <div class="above-fold">
+                                            <link-or-emit><a uisref="base.movie"
+                                                             href="http://localhost:9000/rating/@{i.movieId}">
+                                                <span><p class="title">@i.title</p></span></a>
+                                            </link-or-emit>
+                                            <div class="rating-indicator">
+                                                <ml4-rating-or-prediction>
+                                                    <div class="rating-or-prediction predicted">
+                                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                             class="star-icon" height="14px"
+                                                             version="1.1" viewBox="0 0 14 14"
+                                                             width="14px"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <defs></defs>
+                                                            <polygon fill-rule="evenodd"
+                                                                     points="13.7714286 5.4939887 9.22142857 4.89188383 7.27142857 0.790044361 5.32142857 4.89188383 0.771428571 5.4939887 4.11428571 8.56096041 3.25071429 13.0202996 7.27142857 10.8282616 11.2921429 13.0202996 10.4285714 8.56096041"
+                                                                     stroke="none"></polygon>
+                                                        </svg>
+                                                        <div class="rating-value"> @i.rating</div>
+                                                    </div>
+                                                </ml4-rating-or-prediction>
+                                            </div>
+                                        </div>
+                                        <div class="below-fold">
+                                            <div class="genre-list">
+                                                <div class="genre"><a
+                                                        href="https://www.imdb.com/chart/top"><b>@i.genres</b></a>
+                                                </div>
+                                            </div>
+                                            <div class="ratings-display">
+                                                <div class="rating-average"><span class="rating-large">@i.rating</span>
+                                                    <span class="rating-total">/5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </movie-card-md1>
+                    </movie-card-smart>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+}

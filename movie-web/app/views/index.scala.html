@@ -1,0 +1,23 @@
+@import helper._
+@(form: Form[BasicForm])(implicit messages: Messages)
+@main("Welcome to Play") {
+
+<h1 class="word" align="center">Big Data Movie Recommendation System!</h1>
+<center><img class="div" align="center" src="@routes.Assets.versioned("images/movie.jpg")" alt="homepic" style="width:1000px;height:800px></center>>
+
+<div class="div1">
+
+  <div style="position:center">
+    <center><h3>Please enter an user ID:</h3></center>
+    @helper.form(routes.HomeController.analysisPost) {
+    <center>@inputText(form("userid"))</center>
+    <center><h3>How many movies would you like to get recommended:</h3></center>
+    <center>@inputText(form("recommendNum"))</center>
+    <center><h3>How many movies would you like to be suggested from other genres:</h3></center>
+    <center>@inputText(form("genreNum"))</center>
+    <center><input type="submit" value="Submit"></center>
+    }
+  </div>
+
+</div>
+}
