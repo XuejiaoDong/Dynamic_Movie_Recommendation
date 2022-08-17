@@ -1,0 +1,24 @@
+*/.idea/*
+*/project/*
+*/target/*
+*/.bsp/*
+*.class
+*.log
+
+target/
+project/target/
+api/
+
+*.iml
+.idea
+.bsp/*
+output\.html
+/CSYEoutput.html
+/draft final.pages
+/.bsp/
+
+ETL/checkpoint/*
+ETL/ETLRating/*
+checkpoint/*
+
+*/als/*

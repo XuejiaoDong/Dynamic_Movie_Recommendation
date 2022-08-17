@@ -1,0 +1,20 @@
+@import helper._
+@(userForm: Form[MovieRatingForm], movieId:String)(implicit messages: Messages)
+@main("Rating") {
+
+<section id="top">
+    <center><img class="div" align="center" src="@routes.Assets.versioned("images/rating.jpg")" alt="ratingpic" style="width:600px;height:400px></center>>
+    <div class = "rating">
+        <center><h2>Please enter your rating for the movie</h2></center>
+        @helper.form(routes.HomeController.submit) {
+        <center><h3>Hello, please enter your ID below:</h3></center>
+        <center>@inputText(userForm("userId"))</center>
+        <center><h3>Here is the ID of the movie you just click: @movieId. Please re-enter it</h3></center>
+        <center>@inputText(userForm("movieId"))</center>
+        <center><h3>Please enter your rating for the movie (from 1-5)</h3></center>
+        <center>@inputText(userForm("rating"))</center>
+        <center><input type="submit" value="Submit"></center>
+        }
+    </div>
+</section>
+}
