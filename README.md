@@ -23,7 +23,7 @@ A Movie Recommendation System with Simulated Dynamic dataflow. Also support a si
       - https://files.grouplens.org/datasets/movielens/ml-25m-README.html
       - to run the big dataset, you will need more computer resources (at least 32G memory and 16 cores CPU)
 - Slides: 
-   - proposal https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/Presentation%20Slides%20(both%20slides%20goes%20here)/final%20project%20proposal%20(DMRS).docx
+   - proposal https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/Presentation%20Slides%20(both%20slides%20goes%20here)/final%20project%20proposal%20(DMRS).docx
    - planning presentation slides: https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/Presentation%20Slides%20(both%20slides%20goes%20here)/CSYE7200%20-%20Planning%20Presentation.pptx
    - final slides: https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/Presentation%20Slides%20(both%20slides%20goes%20here)/CSYE7200%20-%20%20Final%20Presentation.pptx
 
