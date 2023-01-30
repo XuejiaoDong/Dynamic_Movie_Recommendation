@@ -1,6 +1,4 @@
 # CSYE7200-DynamicMovieRecommendation
-> Although we have tried our best to let the configuration as simpler as possible and avoid environment dependencies, every step inevitably involves everyone's individual environment and network configuration. **If you have any problem, feel free to slack us (Yang, Liuxiu, Xuejiao, Glenn) for trouble shooting.** We have tried on three different OS - Ubuntu, CentOS, Mac, including all details will too complex to read the instruction, so this instruction will only focus on Ubuntu. **We suggest you to install and run the whole system in one machine, that will be much easier**. 
-
 ## Introduction
 
 A Movie Recommendation System with Simulated Dynamic dataflow. Also support a simple User Interface.
