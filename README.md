@@ -110,7 +110,7 @@ cd kafka_2.13-3.0.0
         * start Kafka: ```bin/kafka-server-start.sh config/server.properties```
         * if kafka shuts down, restart it.
 
-     <p><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/kafka.png"></p>
+     <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/kafka.png"></p>
 
 
 ## sbt 1.3.13
@@ -190,7 +190,7 @@ cd kafka_2.13-3.0.0
 
 * change root password
 
-   ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/m5.png)
+   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m5.png)
 
 * create database
   
@@ -216,13 +216,13 @@ cd kafka_2.13-3.0.0
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
    ```
 
-   ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/m1.png)
+   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m1.png)
 
-   ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/m2.png)
+   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m2.png)
 
-   ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/m3.png)
+   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m3.png)
 
-   ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/m4.png)
+   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m4.png)
 
    
 
@@ -275,19 +275,19 @@ Output● grafana-server.service - Grafana instance
 
 - config Grafana datasource
 
-  ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/g1.png)
+  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g1.png)
 
-  ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/g2.png)
+  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g2.png)
 
-  ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/g3.png)
+  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g3.png)
 
-  ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/g4.png)
+  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g4.png)
 
-  ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/g5.png)
+  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g5.png)
 
-  ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/g6.png)
+  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g6.png)
 
-  ![](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/g7.png)
+  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g7.png)
 
 
 
@@ -322,22 +322,22 @@ Output● grafana-server.service - Grafana instance
  (1) dataflow-stimulator
    path: dataflow-stimulator/lib
 
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/dataflow_jar.png" ></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/dataflow_jar.png" ></p>
 
  (2) ETL
    path:ETL/lib
 
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/ETL_jar.png" ></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/ETL_jar.png" ></p>
 
  (3) movie-recommed
    path: movie-recommend/lib
 
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/movie_recommend_jar.png" ></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/movie_recommend_jar.png" ></p>
 
  (4) movie-web
    path: movie-web/lib
 
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/movie_web_jar.png" ></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/movie_web_jar.png" ></p>
 
 ## Dataflow Simulator & ETL <a id="dataflow & etl"/>
 ### Outline:
@@ -351,11 +351,11 @@ Output● grafana-server.service - Grafana instance
 * ensure Kafka is running correctly as the previous step
 * cd ../CSYE7200-MovieRecommendation/ETL, input sbt run
   
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/sbt_run.png" ></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/sbt_run.png" ></p>
 * check console
    * If the root result appears, and no error is reported, it means the execution is successful
    
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/Run_ETL_Success.png"></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Run_ETL_Success.png"></p>
 
 ### 2. run Dataflow-Simulator
 * go to /dataflow-simulator, run the following command
@@ -363,16 +363,16 @@ Output● grafana-server.service - Grafana instance
 sbt compile
 sbt run, and then select MyProducer.scala
 ```
-<p><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/producer.png"></p> <br/>
-<p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/Kafka_Prodcuer_Success.png"></p>
+<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/producer.png"></p> <br/>
+<p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Kafka_Prodcuer_Success.png"></p>
 
 ### 3. Check Console
   * If the batch in the console received no data, just like the picture below, that means all of the data in kafka has been consumed. Then we need restart kafka producer. Please refer to formal step in dataflow-stimulator module to rerun kafka producer.  
     
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/bath0.png" ></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/bath0.png" ></p>
   * If the batch in the console received data, just like the picture below, that means ETL process successful, and data will save into CSV files. Every batch represents one csv file
     
-   <p align="left"><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/bath2.png"></p>
+   <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/bath2.png"></p>
  * After the previous step is executed successfully, do not close this shell window.
    
 
@@ -383,7 +383,7 @@ Checkpoint helps build fault-tolerant and resilient Spark applications. In Spark
 After run the ETL module, we can see the checkpoint folder appear in the ETL directory.
 
 <p align="left">
-      <img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/checkpoint.png">
+      <img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/checkpoint.png">
      </p>
 
 ### 5. Check CSV Result
@@ -396,7 +396,7 @@ Main process：
 
 schema：
 <p align="left">
-      <img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/Kafka_schema.png" >
+      <img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Kafka_schema.png" >
      </p>
 
 
@@ -404,7 +404,7 @@ schema：
 
 schema：
 <p align="left">
-      <img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/Dataset[RatingLog]_schema.png">
+      <img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Dataset[RatingLog]_schema.png">
      </p>
 
 
@@ -413,7 +413,7 @@ schema：
 This is the final result. We can see ETLRating folder appears in the ETL directory
 
 <p align="left">
-      <img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/Final_csv.png" width = "400" height="300">
+      <img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Final_csv.png" width = "400" height="300">
      </p>
 <a href="#run">Back to Index</a> <br/>
 
@@ -479,12 +479,12 @@ addSbtPlugin("org.foundweekends.giter8" % "sbt-giter8-scaffold" % "0.11.0")
 
 ### 2. UI flow
    - Home page:
-      ![Homepage](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/Homepage.png?raw=true "Logo Title Text 1")
+      ![Homepage](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Homepage.png?raw=true "Logo Title Text 1")
 
    * In here user will enter their id, their request movies number (anywhere from 1-20 or 30 should work),and other movies for each genre that they want to be displayed. For example, input userid = 1, recommendNum=10, genreNum=6, then `submit`.
 
    - Recommend Page:
-      ![Rec page](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/RecommendPage.png?raw=true "Logo Title Text 2")
+      ![Rec page](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/RecommendPage.png?raw=true "Logo Title Text 2")
 
       * Recommend page will have list of movies with system predicted rating suggested to user,as well as other genes movies like Action, Comedy, Horror, etc
       * Click on image/movies title will bring user to rating page of that movies, click on genre title will bring them to IMDB list of movies related of that genre
@@ -530,8 +530,8 @@ When new users comes in our system, there is little rating from them. We can not
 
 ###  Virtualization
 
-![Homepage](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/rmse.png?raw=true "RMSE")
+![Homepage](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/rmse.png?raw=true "RMSE")
 
-![Homepage](https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/accuracy.png?raw=true "accuracy")
+![Homepage](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/accuracy.png?raw=true "accuracy")
 
 >>>>>>> master
