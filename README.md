@@ -103,7 +103,7 @@ cd kafka_2.13-3.0.0
 
      <p><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/zookeeper.png"></p>
 
-   * ##### start kafka
+     * ##### start kafka
 
         * go to /kafka, run the following command
 
