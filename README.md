@@ -101,7 +101,7 @@ cd kafka_2.13-3.0.0
        * go to /kafka, run the following command
        * start zookeeper: ```bin/zookeeper-server-start.sh config/zookeeper.properties```
 
-     <p><img src="https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/images/zookeeper.png"></p>
+     <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/zookeeper.png"></p>
 
      * ##### start kafka
 
