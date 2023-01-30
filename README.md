@@ -101,7 +101,7 @@ cd kafka_2.13-3.0.0
        * go to /kafka, run the following command
        * start zookeeper: ```bin/zookeeper-server-start.sh config/zookeeper.properties```
 
-     <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/zookeeper.png"></p>
+     <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/zookeeper.png" width=85%></p>
 
      * ##### start kafka
 
@@ -110,7 +110,7 @@ cd kafka_2.13-3.0.0
         * start Kafka: ```bin/kafka-server-start.sh config/server.properties```
         * if kafka shuts down, restart it.
 
-     <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/kafka.png"></p>
+     <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/kafka.png" width=85%></p>
 
 
 ## sbt 1.3.13
@@ -189,8 +189,8 @@ cd kafka_2.13-3.0.0
    ```
 
 * change root password
-
-   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m5.png)
+   
+   <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m5.png" width=60%></p>
 
 * create database
   
@@ -215,14 +215,13 @@ cd kafka_2.13-3.0.0
      `time` datetime DEFAULT CURRENT_TIMESTAMP
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
    ```
-
-   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m1.png)
-
-   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m2.png)
-
-   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m3.png)
-
-   ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m4.png)
+   <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m1.png" width=60%></p>
+   
+   <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m2.png" width=85%></p>
+   
+   <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m3.png" width=80%></p>
+   
+   <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m4.png" width=55%></p>
 
    
 
@@ -274,21 +273,19 @@ Output● grafana-server.service - Grafana instance
       * visit http://localhost:3000 if you don't change the port, it should be 3000
 
 - config Grafana datasource
-
-  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g1.png)
-
-  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g2.png)
-
-  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g3.png)
-
-  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g4.png)
-
-  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g5.png)
-
-  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g6.png)
-
-  ![](https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g7.png)
-
+  <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g1.png" width=75%></p>
+  
+  <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g2.png" width=85%></p>
+  
+  <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g3.png" width=85%></p>
+  
+  <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g4.png" width=60%></p>
+  
+  <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g5.png" width=60%></p>
+  
+  <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g6.png" width=60%></p>
+  
+  <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/g7.png" width=60%></p>
 
 
 - import Grafana dashboard
