@@ -17,8 +17,8 @@ A Movie Recommendation System with Simulated Dynamic dataflow. Also support a si
    
 - Datasource: 
    - small dataset
-      - https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/dataflow-stimulator/src/main/resources/ratings.csv
-      - https://github.com/youngbai/CSYE7200-MovieRecommendation/blob/main/db-utils/src/main/resources/movies.csv
+      - https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/main/dataflow-stimulator/src/main/resources/ratings.csv
+      - https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/db-utils/src/main/resources/movies.csv
    - big dataset
       - https://files.grouplens.org/datasets/movielens/ml-25m-README.html
       - to run the big dataset, you will need more computer resources (at least 32G memory and 16 cores CPU)
