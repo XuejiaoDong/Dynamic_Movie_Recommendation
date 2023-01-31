@@ -92,8 +92,8 @@ A movie recommendation system dynamically provides users with personalized recom
          * go to /kafka
          * run ```bin/kafka-server-start.sh config/server.properties```
          * if kafka shuts down, restart it.
-<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Screen Shot 2023-01-31 at 2.38.43 PM.png" width=75%></p>
-<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/kafka.png" width=85%></p>
+<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Screen Shot 2023-01-31 at 2.38.43 PM.png" width=80%></p>
+<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/kafka2.png" width=65%></p>
 
 
 ## sbt 1.3.13
