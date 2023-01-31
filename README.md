@@ -1,4 +1,4 @@
-# CSYE7200-DynamicMovieRecommendation
+# CSYE7200_Dynamic_Movie_Recommendation
 ## Introduction
 
 A movie recommendation system dynamically provides users with personalized recommendations based on their rating data for movies. 
@@ -28,9 +28,9 @@ A movie recommendation system dynamically provides users with personalized recom
    - final slides: https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/Presentation%20Slides%20(both%20slides%20goes%20here)/CSYE7200%20-%20%20Final%20Presentation.pptx
 
 ## How to run the project <a id="run"/>
-> Note:  Because play framework uses some plugins that IntelliJ could not recognize, you MUST use terminal to run the whole project. Like `sbt run`.  Otherwise, you will see errors in IntelliJ.
+> Note:  Because play framework uses some plugins that IntelliJ could not recognize, you MUST use terminal to run the whole project. Like 'sbt run'.  Otherwise, you will see errors in IntelliJ.
 
-#### Install & Start Servers
+#### Step 1: Install & Start Servers
 
    1. Ubuntu 20.04 LTS----for windows os
    2. Java 11
@@ -42,7 +42,7 @@ A movie recommendation system dynamically provides users with personalized recom
    8. MySQL 5.6
    9. Grafana 8.2.4
 
-#### Start Application
+#### Step 2: Start Application
 
    10. <a href="#dataflow & etl">Dataflow Simulator & ETL</a> <br/>
    11. <a href="#algorithms">Algorithms</a><br/>
@@ -50,43 +50,32 @@ A movie recommendation system dynamically provides users with personalized recom
    13. <a href="#data visualization">Data Visualization (MySQL & Grafana)</a> <br/>
 
 
-## ---------------------Install & Start Servers---------------------
+## ---------------------Step1: Install & Start Servers---------------------
 
 ## Ubuntu 20.04 LTS---for windows os
-
-* install Ubuntu
   * get Ubuntu from app store
   * if your pc is Linux OS or Mac OS, you can skip this step.
 
 ## Java 11
+  * install jre: ```sudo apt install default-jdk ```
+  * install compiler: ```sudo apt-get install openjdk-11-jdk```
+  * check java version: java -version (jre) javac -version (compiler)
 
-* install java
-
-     * install jre: sudo apt install default-jdk
-
-     * install compiler: sudo apt-get install openjdk-11-jdk
-
-   * check java version: java -version (jre) javac -version (compiler)
-
-## Scala 2.12.15
-
-   * install scala:
-
-   ```
-sudo apt-get update
-sudo apt-get install scala
-   ```
-
-   * check Scala version: ```scala -version```
+## Scala 2.12.15  
+  * install scala
+  ```
+  sudo apt-get update
+  sudo apt-get install scala
+  ```
+  * check Scala version: ```scala -version```
 
 ## Kafka 3.0.0
-
-   * install kafka:
+  * install kafka:
 
    ```
-wget https://dlcdn.apache.org/kafka/3.0.0/kafka_2.13-3.0.0.tgz
-tar xzf kafka_2.13-3.0.0.tgz
-cd kafka_2.13-3.0.0
+   wget https://dlcdn.apache.org/kafka/3.0.0/kafka_2.13-3.0.0.tgz
+   tar xzf kafka_2.13-3.0.0.tgz
+   cd kafka_2.13-3.0.0
    ```
 
 * set configurations: 
@@ -96,19 +85,14 @@ cd kafka_2.13-3.0.0
 
 * start Kafka: 
 
-     * start zookeeper
-     * go to /kafka, run the following command
-     * start zookeeper: ```bin/zookeeper-server-start.sh config/zookeeper.properties```
-
+     * start zookeeper first
+         * go to /kafka
+         * run ```bin/zookeeper-server-start.sh config/zookeeper.properties```
+     * then start kafka 
+         * go to /kafka
+         * run ```bin/kafka-server-start.sh config/server.properties```
+         * if kafka shuts down, restart it.
 <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/zookeeper.png" width=85%></p>
-
-     * ##### start kafka
-
-        * go to /kafka, run the following command
-
-        * start Kafka: ```bin/kafka-server-start.sh config/server.properties```
-        * if kafka shuts down, restart it.
-
 <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/kafka.png" width=85%></p>
 
 
