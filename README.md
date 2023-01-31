@@ -102,58 +102,54 @@ A movie recommendation system dynamically provides users with personalized recom
      * follow the offical document of scala and sbt to set up and use sbt by cmd: <br/>
        https://docs.scala-lang.org/getting-started/sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html https://www.scala-sbt.org/1.x/docs/sbt-by-example.html
 
-   ```
-   sudo apt-get update
-   sudo apt-get install apt-transport-https curl gnupg -yqq
-   echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
-   echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
-   curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo -H gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/scalasbt-release.gpg --import
-   sudo chmod 644 /etc/apt/trusted.gpg.d/scalasbt-release.gpg
-   sudo apt-get update
-   sudo apt-get install sbt
-   ```
+```
+sudo apt-get update
+sudo apt-get install apt-transport-https curl gnupg -yqq
+echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
+curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo -H gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/scalasbt-release.gpg --import
+sudo chmod 644 /etc/apt/trusted.gpg.d/scalasbt-release.gpg
+sudo apt-get update
+sudo apt-get install sbt
+```
 
 
  ## Redis 3.2
 
 * install Redis
 
-  ```shell
-  # download and install
-  wget https://download.redis.io/releases/redis-6.2.6.tar.gz
-  tar xvzf redis-6.2.6.tar.gz
-  cd redis-6.2.6/
-  make
+```shell
+# download and install
+wget https://download.redis.io/releases/redis-6.2.6.tar.gz
+tar xvzf redis-6.2.6.tar.gz
+cd redis-6.2.6/
+make
   
-  # start redis
-  src/redis-server
-  ```
-
-  
+# start redis
+src/redis-server
+```
 
 * set configurations
 
   * go to path=db-utils/src/main/resources/application.properties
   * change redis.server, redis.port according where you install your redis, and its port; Typically, redis.server is the ip address of your redis, and port in default is 6379
 
-* Note: your redis must run in the same machine as this Movie Recommendation Application
+* Note: your redis must run in the same machine as the Movie Recommendation Application
 
 ## Hadoop 3.3.1
 
 > You can follow this link to install Hadoop https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html#Download
 
 - download Hadoop
-
-  ```shell
-  wget https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
-  ```
+```shell
+wget https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
+```
 
 * install Hadoop
-
-  ```shell
-  # set to the root of your Java installation
-  export JAVA_HOME=/usr/java/latest
-  ```
+```shell
+# set to the root of your Java installation
+export JAVA_HOME=/usr/java/latest
+```
 
 
 
@@ -163,41 +159,38 @@ A movie recommendation system dynamically provides users with personalized recom
 
 * install & start MySQL
 
-   ```
-   sudo apt update
-   sudo apt install mysql-server
-   sudo service mysql start
-   sudo mysql_secure_installation
-   
-   ```
+```
+sudo apt update
+sudo apt install mysql-server
+sudo service mysql start
+sudo mysql_secure_installation
+```
 
 * change root password
    
-<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m5.png" width=60%></p>
+<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m5.png" width=50%></p>
 
-* create database
-  
-  ```sql
-  CREATE DATABASE `recsys` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
-  ```
+* create database  
+```sql
+CREATE DATABASE `recsys` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+```
   
 * create tables
-
-   ```sql
-   # choose database
-   use recsys
+```sql
+# choose database
+use recsys
    
-   CREATE TABLE `input` (
-     `amount` int(11) DEFAULT '0',
-     `time` datetime DEFAULT CURRENT_TIMESTAMP
-   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+CREATE TABLE `input` (
+`amount` int(11) DEFAULT '0',
+`time` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
    
-   CREATE TABLE `performance` (
-     `rmse` double DEFAULT NULL,
-     `accuracy` double DEFAULT NULL,
-     `time` datetime DEFAULT CURRENT_TIMESTAMP
-   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
-   ```
+CREATE TABLE `performance` (
+`rmse` double DEFAULT NULL,
+`accuracy` double DEFAULT NULL,
+`time` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+```
 <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m1.png" width=55%></p>
    
 <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m2.png" width=85%></p>
@@ -207,17 +200,11 @@ A movie recommendation system dynamically provides users with personalized recom
 <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/m4.png" width=55%></p>
 
    
-
-   If you can see table `input` and `performance` is created as picture showed, then you create table successfully.
-
-   
+If you can see table `input` and `performance` is created as picture showed, then you create table successfully.
 
 * set configurations 
-  
   * go to path=db-utils/src/main/resources/application.properties
   * change mysql.server, mysql.username, mysql.password
-  
-  
 
 ## Grafana 8.2.4
    * install and start Grafana: <br/>
@@ -241,12 +228,12 @@ sudo systemctl status grafana-server
 ou will receive output similar to this:
 
 ```
-Output● grafana-server.service - Grafana instance
-     Loaded: loaded (/lib/systemd/system/grafana-server.service; disabled; vendor preset: enabled)
+Output grafana-server.service - Grafana instance
+   Loaded: loaded (/lib/systemd/system/grafana-server.service; disabled; vendor preset: enabled)
    Active: active (running) since Thu 2020-05-21 08:08:10 UTC; 4s ago
-     Docs: http://docs.grafana.org
- Main PID: 15982 (grafana-server)
-    Tasks: 7 (limit: 1137)
+   Docs: http://docs.grafana.org
+   Main PID: 15982 (grafana-server)
+   Tasks: 7 (limit: 1137)
 ...
 ```
 
