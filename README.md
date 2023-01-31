@@ -1,7 +1,6 @@
 # CSYE7200-DynamicMovieRecommendation
 ## Introduction
 
-Full Stack
 A movie recommendation system dynamically provides users with personalized recommendations based on their rating data for movies. 
 
 - Software and Version:
