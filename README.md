@@ -1,7 +1,8 @@
 # CSYE7200-DynamicMovieRecommendation
 ## Introduction
 
-A Movie Recommendation System with Simulated Dynamic dataflow. Also support a simple User Interface.
+Full Stack
+A movie recommendation system dynamically provides users with personalized recommendations based on their rating data for movies. 
 
 - Software and Version:
    - Scala version: 2.12.15
