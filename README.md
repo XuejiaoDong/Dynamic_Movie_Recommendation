@@ -318,11 +318,11 @@ Output grafana-server.service - Grafana instance
 * ensure Kafka is running correctly as the previous step
 * cd ../CSYE7200-MovieRecommendation/ETL, input sbt run
   
- <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/sbt_run.png" width=80%></p>
+<p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/sbt_run.png" width=80%></p>
 * check console
    * If the root result appears, and no error is reported, it means the execution is successful
    
- <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Run_ETL_Success.png" width=80%></p>
+<p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Run_ETL_Success.png" width=80%></p>
 
 ### 2. run Dataflow-Simulator
 * go to /dataflow-simulator, run the following command
@@ -330,17 +330,16 @@ Output grafana-server.service - Grafana instance
 sbt compile
 sbt run, and then select MyProducer.scala
 ```
-<p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/producer.png" width=80%></p> <br/>
 <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Kafka_Prodcuer_Success.png" width=60%></p>
 
 ### 3. Check Console
-  * If the batch in the console received no data, just like the picture below, that means all of the data in kafka has been consumed. Then we need restart kafka producer. Please refer to formal step in dataflow-stimulator module to rerun kafka producer.  
+* If the batch in the console received no data, just like the picture below, that means all of the data in kafka has been consumed. Then we need restart kafka producer. Please refer to formal step in dataflow-stimulator module to rerun kafka producer.  
     
 <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/bath0.png" width=40%></p>
-  * If the batch in the console received data, just like the picture below, that means ETL process successful, and data will save into CSV files. Every batch represents one csv file
+* If the batch in the console received data, just like the picture below, that means ETL process successful, and data will save into CSV files. Every batch represents one csv file
     
 <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/bath2.png" width=30%></p>
- * After the previous step is executed successfully, do not close this shell window.
+* After the previous step is executed successfully, do not close this shell window.
    
 
 ### 4. Check checkpoint
