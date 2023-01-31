@@ -237,8 +237,6 @@ Output grafana-server.service - Grafana instance
 ...
 ```
 
-
-
    * open Grafana client 
       * visit http://localhost:3000 if you don't change the port, it should be 3000
 
@@ -309,7 +307,7 @@ Output grafana-server.service - Grafana instance
 ## Dataflow Simulator & ETL <a id="dataflow & etl"/>
 ### Outline:
 1. Run ETL Process - use shell
-2. Run Dataflow-Simulator
+2. Run Dataflow-Stimulator
 3. Check checkpoint
 4. Check CSV Result
 
@@ -324,11 +322,11 @@ Output grafana-server.service - Grafana instance
    
 <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Run_ETL_Success.png" width=80%></p>
 
-### 2. run Dataflow-Simulator
+### 2. run Dataflow-Stimulator
 * go to /dataflow-simulator, run the following command
 ```
 sbt compile
-sbt run, and then select MyProducer.scala
+sbt run
 ```
 <p align="left"><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/Kafka_Prodcuer_Success.png" width=60%></p>
 
