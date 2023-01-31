@@ -96,10 +96,9 @@ cd kafka_2.13-3.0.0
 
 * start Kafka: 
 
-     * ##### start zookeeper
-
-       * go to /kafka, run the following command
-       * start zookeeper: ```bin/zookeeper-server-start.sh config/zookeeper.properties```
+     * start zookeeper
+     * go to /kafka, run the following command
+     * start zookeeper: ```bin/zookeeper-server-start.sh config/zookeeper.properties```
 
 <p><img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/zookeeper.png" width=85%></p>
 
