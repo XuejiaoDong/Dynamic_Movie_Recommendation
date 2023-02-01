@@ -23,7 +23,7 @@ libraryDependencies ++= Seq(
   "org.apache.kafka" %% "kafka" % "3.0.0",
   "com.typesafe" % "config" % "1.4.1",
   "org.apache.kafka" % "kafka-clients" % "3.0.0",
-  "mysql" % "mysql-connector-java" % "5.1.24",
+  "mysql" % "mysql-connector-java" % "8.0.28",
 )
 
 
