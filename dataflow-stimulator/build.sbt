@@ -14,5 +14,5 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-api" % "1.7.32",
   "org.slf4j" % "slf4j-simple" % "1.7.32",
   "org.clapper" %% "grizzled-slf4j" % "1.3.4",
-  "mysql" % "mysql-connector-java" % "5.1.24",
+  "mysql" % "mysql-connector-java" % "8.0.28",
 )
