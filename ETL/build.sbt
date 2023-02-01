@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % "3.2.0",
   "org.apache.spark" %% "spark-mllib" % "3.2.0",
   "org.jblas" % "jblas" % "1.2.3",
-  "com.redislabs" %% "spark-redis" % "6.2.6",
+  "com.redislabs" %% "spark-redis" % "2.4.2",
   "net.debasishg" %% "redisclient" % "3.41",
   "org.apache.spark" %% "spark-streaming-kafka-0-10" % "3.2.0",
   "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.2.0",
