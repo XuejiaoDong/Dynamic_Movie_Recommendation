@@ -9,6 +9,6 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.2.3" % "test",
   "com.redislabs" %% "spark-redis" % "2.4.2",
   "net.debasishg" %% "redisclient" % "3.41",
-  "mysql" % "mysql-connector-java" % "5.1.24",
+  "mysql" % "mysql-connector-java" % "8.0.28",
   "com.typesafe" % "config" % "1.4.1",
 )
