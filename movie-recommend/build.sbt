@@ -18,7 +18,7 @@ libraryDependencies ++= Seq(
   "net.debasishg" %% "redisclient" % "3.41",
    "com.influxdb" % "influxdb-client-scala_2.12" % "4.0.0",
   "io.razem" %% "scala-influxdb-client" % "0.6.3",
-  "mysql" % "mysql-connector-java" % "5.1.24",
+  "mysql" % "mysql-connector-java" % "8.0.28",
 )
 
 //parallelExecution in Test := false
