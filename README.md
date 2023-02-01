@@ -471,31 +471,31 @@ addSbtPlugin("org.foundweekends.giter8" % "sbt-giter8-scaffold" % "0.11.0")
 
 ### Define the problem
 
-The most abundant features we can get from dataset is user's rating. After convert it into a user-movie matrix, it is a sparse matrix because most of users only rate a small number of movies. We can not directly use the traditional ML models, like KNN, SVM to implement recommendation.
+The most abundant feature we can get from the dataset is user's rating. After converting it into a user-movie matrix, it is a sparse matrix because most of the users only rate a small number of movies. We can not directly use the traditional ML models, like KNN, SVM to implement recommendations.
 
-However, if we can find a way to predict ratings of every user on all movies, we are able to recommend user the movies with highest ratings. 
+However, if we can find a way to predict the ratings of every user on all movies, we will be able to recommend to users the movies with the highest ratings.
 
 ### Solutions/methods
 
-So our first job is to define the Loss Function, which is the mean square root of error (error is actual rating and predicted rating). Then use ALS or Gradient Descent to find the best prediction by decreasing the value of Loss Function.
+So our first job is to define the Loss Function, which is the mean square root of error (the error is the difference between the actual rating and predicted rating). Then use ALS or Gradient Descent to find the best prediction by decreasing the value of the Loss Function.
 
-With Cross-Validation, we are able to avoid overfitting and efficiently test  our model. We also use Grid Search to tune hyper parameter in ALS. 
+With Cross-Validation, we are able to avoid overfitting and efficiently test our model. We also use Grid Search to tune hyperparameters in ALS. 
 
-In the end, we get a matrix which has predicted ratings for every user on all movies. With this matrix, we are able to find the best rating movies for specific user and recommend these movies to this user.
+In the end, we get a matrix that has predicted ratings for every user on all movies. With this matrix, we are able to find the best rating movies for the specific user and recommend these movies to this user.
 
-In order to speedup the performance of system, we store the whole matrix into redis, so that the front end service is able to quickly fetch the recommended movies for user.
+In order to speed up the performance of the system, we store the whole matrix in Redis, so that the front-end service is able to quickly fetch the recommended movies for the user.
 
 ### Evaluation
 
-We use RMSE (Root Mean Square Error) and Accuracy to evaluate our system. RMSE rmse means the average difference to the right rating, so it displays how we are close the right rating. `Accuracy = 1 - RMSE/5`.
+We use RMSE (Root Mean Square Error) and Accuracy to evaluate our system. RMSE means the average difference to the right rating, so it displays how we are close to the right rating. Accuracy = 1 - RMSE/5.
 
-If RMSE is 0, that means there is no loss/error, so accurracy is 1 (or 100%); If RMSE is 5 which is highest rating user can give to a movie, there will be high loss/error, so accuracy is 0 (or 0%); RMSE could be negative, that means we are so far away from the right rating, which is not what want, but it can still display we are far away from the right answer.
+If RMSE is 0, that means there is no loss/error, so accuracy is 1 (or 100%); If RMSE is 5, which is the highest rating user can give to a movie, there will be high loss/error, so accuracy is 0 (or 0%); RMSE could be negative, that means we are so far away from the right rating, which is not what want, but it can still display we are far away from the right answer.
 
 In the end, we are able to reach more than 80% accuracy.
 
 ### Cold Start problem
 
-When new users comes in our system, there is little rating from them. We can not directly find what they like. But we can use statistic knowledge to solve this problem. We recommend top N movies from all history ratings to them, and recommend top N movies from each genre to them. The benefit of this feature is dealing with users frequent taste change and giving user more interest to explore new movies of new genre.
+When new users come into our system, there is a little rating from them. We can not directly find what they like. But we can use statistical knowledge to solve this problem. We recommend top N movies from all history ratings to them and recommend top N movies from each genre to them. The benefit of this feature is dealing with users frequent taste changes and giving users more interest in exploring new movies of new genres.
 
 ###  Virtualization
 
@@ -506,5 +506,3 @@ When new users comes in our system, there is little rating from them. We can not
  <p align="left">
  <img src="https://github.com/XuejiaoDong/Dynamic_Movie_Recommendation/blob/main/images/accuracy.png" width=80%>
  </p>
-
->>>>>>> master
